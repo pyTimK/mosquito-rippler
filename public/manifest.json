@@ -1,6 +1,6 @@
 {
-  "name": "Smart Medical Kiosk",
-  "short_name": "SMK",
+  "name": "Mosquito Rippler",
+  "short_name": "Mosquito Rippler",
   "icons": [
     {
       "src": "/images/icons/maskable_icon_x48.png",
@@ -41,8 +41,8 @@
   ],
   "scope": "/",
   "start_url": "/",
-  "description": "Empowering users to access and manage their health data seamlessly. View vital metrics including weight, height, blood pressure, heart rate, SpO2, temperature, and blood pressure. Experience cutting-edge health insights through our Raspberry Pi 4B powered kiosk.",
+  "description": "Mosquito Rippler: Arduino boat creates ripples to eliminate mosquito larvae, detects mosquitoes via microphone, and offers real-time control. Your mosquito-free zone, now at your fingertips!",
   "display": "standalone",
-  "theme_color": "#716EF9",
-  "background_color": "#716EF9"
+  "theme_color": "#0B81EF",
+  "background_color": "#0B81EF"
 }
