@@ -1,0 +1,165 @@
+export default function PHBox() {
+  return (
+    <svg
+      width="148"
+      height="140"
+      viewBox="0 0 148 140"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_d_1_266)">
+        <rect x="4" width="130" height="130" rx="20" fill="#FAFAFA" />
+      </g>
+      <rect
+        x="30.012"
+        y="18.1429"
+        width="1.87952"
+        height="16.5"
+        rx="0.939759"
+        fill="#F2AE70"
+        fillOpacity="0.85"
+      />
+      <rect
+        x="35.0241"
+        y="16.5714"
+        width="1.87952"
+        height="19.6429"
+        rx="0.939759"
+        fill="#C8F270"
+        fillOpacity="0.7"
+      />
+      <rect
+        x="40.0361"
+        y="21.2857"
+        width="1.87952"
+        height="9.42857"
+        rx="0.939759"
+        fill="#70F28D"
+        fillOpacity="0.6"
+      />
+      <rect
+        x="25"
+        y="15"
+        width="1.87952"
+        height="22"
+        rx="0.939759"
+        fill="#F27070"
+      />
+      <rect
+        x="45.0482"
+        y="18.9286"
+        width="1.87952"
+        height="14.9286"
+        rx="0.939759"
+        fill="#70F2DB"
+        fillOpacity="0.5"
+      />
+      <rect
+        x="50.0602"
+        y="21.2857"
+        width="1.87952"
+        height="9.42857"
+        rx="0.939759"
+        fill="#70BDF2"
+        fillOpacity="0.4"
+      />
+      <rect
+        x="55.0723"
+        y="20.5"
+        width="1.87952"
+        height="11.7857"
+        rx="0.939759"
+        fill="#708DF2"
+        fillOpacity="0.3"
+      />
+      <rect
+        x="70.1084"
+        y="18.1429"
+        width="1.87952"
+        height="16.5"
+        rx="0.939759"
+        fill="#B970F2"
+        fillOpacity="0.85"
+      />
+      <rect
+        x="65.0964"
+        y="16.5714"
+        width="1.87952"
+        height="19.6429"
+        rx="0.939759"
+        fill="#7370F2"
+        fillOpacity="0.7"
+      />
+      <rect
+        x="60.0843"
+        y="21.2857"
+        width="1.87952"
+        height="9.42857"
+        rx="0.939759"
+        fill="#8270F2"
+        fillOpacity="0.6"
+      />
+      <rect
+        x="75.1205"
+        y="15"
+        width="1.87952"
+        height="22"
+        rx="0.939759"
+        fill="#EF70F2"
+      />
+      <rect x="96" y="88" width="52" height="52" rx="18" fill="#15233E" />
+      <path
+        d="M122.353 126H122.647C127.247 126 131.086 122.373 130.999 117.854C130.999 117.279 130.911 116.732 130.793 116.214C130.266 113.94 127.628 111.32 125.724 108.5C123.731 105.794 122.5 102.916 122.5 103.002C122.471 102.944 121.24 105.823 119.276 108.5C117.401 111.32 114.734 113.968 114.207 116.185C114.06 116.703 114.001 117.25 114.001 117.825C113.914 122.344 117.753 126 122.353 126Z"
+        fill="url(#paint0_linear_1_266)"
+      />
+      <defs>
+        <filter
+          id="filter0_d_1_266"
+          x="0"
+          y="0"
+          width="138"
+          height="138"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_1_266"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1_266"
+            result="shape"
+          />
+        </filter>
+        <linearGradient
+          id="paint0_linear_1_266"
+          x1="129.381"
+          y1="106.569"
+          x2="114.353"
+          y2="123.926"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#C1E3FF" stopOpacity="0.6" />
+          <stop offset="1" stopColor="#70BDF2" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
