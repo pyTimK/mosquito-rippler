@@ -12,17 +12,17 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDEcByWdsCGm5a5L8E3Pv-ByQ56mLAr2H4",
-  authDomain: "smartinteractivehealthkiosk.firebaseapp.com",
-  projectId: "smartmedicalkiosk",
-  storageBucket: "smartmedicalkiosk.appspot.com",
-  messagingSenderId: "623176063883",
-  appId: "1:623176063883:web:344d5a25b7205869a1ed8e",
+  apiKey: "AIzaSyBuXFiS6zeNvm8IqXqY7FSmsQPYfzpqt_w",
+  authDomain: "mosquito-rippler.firebaseapp.com",
+  projectId: "mosquito-rippler",
+  storageBucket: "mosquito-rippler.appspot.com",
+  messagingSenderId: "122076932552",
+  appId: "1:122076932552:web:dd0bd15c374868094738fd",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-initializeFirestore(app, { localCache: persistentLocalCache(/*settings*/ {}) });
+// initializeFirestore(app, { localCache: persistentLocalCache(/*settings*/ {}) });
 
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getFirestore(app);

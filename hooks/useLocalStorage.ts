@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => void] {
+function useLocalStorage<T>(
+  key: string,
+  initialValue: T
+): [T, (value: T) => void] {
   // Retrieve the value from localStorage on initial render
-  const storedValue = typeof window !== 'undefined' ? localStorage.getItem(key) : null;
-  const initialStoredValue = storedValue ? JSON.parse(storedValue) : initialValue;
+  const storedValue =
+    typeof window !== "undefined" ? localStorage.getItem(key) : null;
+  const initialStoredValue = storedValue
+    ? JSON.parse(storedValue)
+    : initialValue;
   const [value, setValue] = useState<T>(initialStoredValue);
 
   // Update the localStorage whenever the value changes

@@ -3,7 +3,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 const defaultOptions = { duration: 2000, type: "error" as TypeOptions };
 
-const notify = (text: string, options?: Partial<typeof defaultOptions>) => {
+const notify = (
+  text: string | React.FC,
+  options?: Partial<typeof defaultOptions>
+) => {
   options = { ...defaultOptions, ...options };
 
   toast(text, {
@@ -13,6 +16,7 @@ const notify = (text: string, options?: Partial<typeof defaultOptions>) => {
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
+    icon: false,
     progress: undefined,
     type: options.type,
   });

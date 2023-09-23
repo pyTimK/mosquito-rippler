@@ -1,12 +1,12 @@
-import "./globals.css";
+import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SMK",
-  description: "A web-app-interface for the Smart Medical Kiosk",
+  title: "Mosquito Rippler",
+  description: "A web-app-interface for the Mosquito Rippler Device",
 };
 
 export default function RootLayout({
@@ -17,6 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <link
           rel="apple-touch-icon"

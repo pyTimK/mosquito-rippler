@@ -1,25 +1,37 @@
 import { FieldValue, serverTimestamp } from "firebase/firestore";
 
 export interface ReadingData {
-  weight: number;
-  height: number;
-  temperature: number;
-  heart_rate: number;
-  blood_oxygen: number;
-  blood_pressure_diastolic: number;
-  blood_pressure_systolic: number;
-  record_date: FieldValue | Date;
+  frequency: number;
+  lat: number;
+  long: number;
+  left: boolean;
+  right: boolean;
+  voltage: number;
+  geo_lat: number;
+  geo_long: number;
+  geo_radius: number;
+  male_max_frequency: number;
+  male_min_frequency: number;
+  female_max_frequency: number;
+  female_min_frequency: number;
+  count: { [key: string]: number };
 }
 
 export const constructEmptyReadingData = (): ReadingData => {
   return {
-    weight: 0,
-    height: 0,
-    temperature: 0,
-    heart_rate: 0,
-    blood_oxygen: 0,
-    blood_pressure_diastolic: 0,
-    blood_pressure_systolic: 0,
-    record_date: serverTimestamp(),
+    frequency: 0,
+    lat: 0,
+    long: 0,
+    left: false,
+    right: false,
+    voltage: 0,
+    geo_lat: 0,
+    geo_long: 0,
+    geo_radius: 0,
+    male_max_frequency: 0,
+    male_min_frequency: 0,
+    female_max_frequency: 0,
+    female_min_frequency: 0,
+    count: {},
   } as ReadingData;
 };
