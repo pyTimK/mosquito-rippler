@@ -66,7 +66,7 @@ const Device: React.FC<DeviceInterface> = ({}) => {
         <Proppeler />
       </div>
       <div className="absolute flex gap-1 -translate-x-1/2 left-1/2 bottom-14">
-        <p className="text-lg">{readingData.frequency}</p>
+        <p className="text-lg">{Math.floor(readingData.frequency)}</p>
         <p className="text-xs">Hz</p>
       </div>
       <div className="absolute -translate-x-1/2 -translate-y-1 left-1/2 top-24">
@@ -77,7 +77,7 @@ const Device: React.FC<DeviceInterface> = ({}) => {
 };
 
 function computeBatteryLevel(readVoltage: number) {
-  const origVoltage = readVoltage * (14700 / 4700);
+  const origVoltage = (readVoltage + 0.1) * (14700 / 4700);
   const percent = Math.floor(((origVoltage - 9.0) / (12.6 - 9.0)) * 100);
   if (percent < 0) return 0;
   if (percent > 100) return 100;

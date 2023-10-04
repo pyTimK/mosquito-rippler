@@ -10,7 +10,8 @@
 
 html {
   max-width: 100%;
-  overflow-x: hidden;
+  /* overflow: hidden; */
+  overscroll-behavior: none;
 }
 
 body {
@@ -92,4 +93,18 @@ input[type=number] {
 
 .ReactModal__Overlay {
   background-color: rgba(0,0,0,0.3) !important;
+}
+
+.Toastify__toast {
+  max-width: 100vw !important;
+
+}
+.Toastify__toast-container {
+  min-width: 400px !important;
+} 
+
+@media (max-width: 800px) {
+  .Toastify__toast-container {
+    width: 100% !important;
+  } 
 }

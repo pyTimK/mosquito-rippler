@@ -19,6 +19,28 @@ const MainPage: React.FC<MainPageInterface> = () => {
 
   const [deviceTooFar, setDeviceTooFar] = useState(false);
 
+  //! DISABLE BACK DEFAULT BEHAVIOUR
+  useEffect(() => {
+    // Listen for the back button click
+    const handleBackButton = (e: PopStateEvent) => {
+      window.history.pushState(null, "", window.location.href);
+      console.log("BACK TRIGGERED");
+      e.preventDefault();
+    };
+
+    window.history.pushState(null, "", window.location.href);
+    // window.onpopstate = function () {
+    //   window.history.pushState(null, "", window.location.href);
+    // };
+
+    window.addEventListener("popstate", handleBackButton);
+
+    return () => {
+      // Remove the event listener when the component unmounts
+      window.removeEventListener("popstate", handleBackButton);
+    };
+  }, []);
+
   useEffect(() => {
     const timeIntervalId = setInterval(() => {
       if (readingData) {

@@ -1,7 +1,6 @@
 const LocationIcon: React.FC = () => (
   <svg
-    width="50"
-    height="49"
+    width="30"
     viewBox="0 0 50 49"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

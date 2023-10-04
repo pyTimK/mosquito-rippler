@@ -36,16 +36,10 @@ const SettingsPage: React.FC<SettingsPageProps> = ({ end }) => {
     latitudeInput,
     radiusInput,
     updateReadingData,
+    closeModal,
+    modalIsOpen,
+    backHandler,
   } = useSettingsPage();
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  function openModal() {
-    setModalIsOpen(true);
-  }
-
-  function closeModal() {
-    setModalIsOpen(false);
-  }
 
   useEffect(() => {
     if (end) {
@@ -56,7 +50,7 @@ const SettingsPage: React.FC<SettingsPageProps> = ({ end }) => {
   return (
     <SettingsPageContext.Provider value={{ setIsEdited: setSaveButtonEnabled }}>
       <Header>
-        <BackIcon onClick={saveButtonEnabled ? openModal : exitPage} />
+        <BackIcon onClick={backHandler} />
       </Header>
       <form className="flex flex-col px-6 py-6" onSubmit={updateReadingData}>
         {/* DETECTION FREQUENCY */}

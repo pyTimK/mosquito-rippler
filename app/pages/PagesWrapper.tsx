@@ -4,8 +4,8 @@ import { User } from "firebase/auth";
 import { createContext, useState } from "react";
 import { doc } from "firebase/firestore";
 import { db } from "../firebase";
-import SettingsPage from "./SettingsPage";
 import MainPage from "./MainPage";
+import SettingsPage from "./SettingsPage";
 
 export const PagesWrapperContext = createContext({
   user: {} as User,

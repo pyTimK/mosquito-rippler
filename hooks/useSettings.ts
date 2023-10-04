@@ -1,6 +1,6 @@
 import { PagesWrapperContext } from "@/app/pages/PagesWrapper";
 import notify from "@/myfunctions/notify";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useMyInput from "./useMyInput";
 import { FirestoreDataType } from "./useFirestoreData";
 import { ReadingData } from "@/classes/ReadingData";
@@ -10,6 +10,44 @@ function useSettingsPage() {
     useContext(PagesWrapperContext);
 
   const [saveButtonEnabled, setSaveButtonEnabled] = useState(false);
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function openModal() {
+    setModalIsOpen(true);
+  }
+
+  function closeModal() {
+    setModalIsOpen(false);
+  }
+
+  function backHandler() {
+    if (saveButtonEnabled) {
+      openModal();
+    } else {
+      exitPage();
+    }
+  }
+
+  //! DISABLE BACK DEFAULT BEHAVIOUR
+  useEffect(() => {
+    // Listen for the back button click
+    const handleBackButton = (e: PopStateEvent) => {
+      window.history.pushState(null, "", window.location.href);
+      e.preventDefault();
+      console.log("BACK TRIGGERED");
+      backHandler();
+    };
+
+    window.history.pushState(null, "", window.location.href);
+
+    window.addEventListener("popstate", handleBackButton);
+
+    return () => {
+      // Remove the event listener when the component unmounts
+      window.removeEventListener("popstate", handleBackButton);
+    };
+  }, []);
 
   function exitPage() {
     setShowSettingsWithEnd(false);
@@ -134,6 +172,11 @@ function useSettingsPage() {
     radiusInput,
     updateReadingData,
     readingData,
+    modalIsOpen,
+    setModalIsOpen,
+    openModal,
+    closeModal,
+    backHandler,
   };
 }
 

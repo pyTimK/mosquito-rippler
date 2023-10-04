@@ -43,6 +43,6 @@
   "start_url": "/",
   "description": "Mosquito Rippler: Arduino boat creates ripples to eliminate mosquito larvae, detects mosquitoes via microphone, and offers real-time control. Your mosquito-free zone, now at your fingertips!",
   "display": "standalone",
-  "theme_color": "#0B81EF",
-  "background_color": "#0B81EF"
+  "theme_color": "#448AFF",
+  "background_color": "#448AFF"
 }
