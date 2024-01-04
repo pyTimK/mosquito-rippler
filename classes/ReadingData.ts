@@ -15,6 +15,8 @@ export interface ReadingData {
   female_max_frequency: number;
   female_min_frequency: number;
   count: { [key: string]: number };
+  reverse: boolean;
+  air_pump: number;
 }
 
 export const constructEmptyReadingData = (): ReadingData => {
@@ -33,5 +35,7 @@ export const constructEmptyReadingData = (): ReadingData => {
     female_max_frequency: 0,
     female_min_frequency: 0,
     count: {},
+    reverse: false,
+    air_pump: 0,
   } as ReadingData;
 };

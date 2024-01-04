@@ -108,3 +108,47 @@ input[type=number] {
     width: 100% !important;
   } 
 }
+
+
+
+/*! SLIDER */
+
+.my-slider:hover {
+  opacity: 1;
+}
+
+
+.my-slider::-webkit-slider-runnable-track {
+height: 12px;
+background: #eee;
+box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+cursor: pointer;
+-webkit-appearance: none;
+border-radius: 50px;
+}
+
+.my-slider {
+-webkit-appearance: none;
+width: 90%;
+max-width: 500px;
+border-radius: 50%;
+outline: none;
+}
+.my-slider:focus,
+.my-slider:active{
+border: 0;
+outline: none;
+}
+.my-slider::-webkit-slider-thumb {
+border: none;
+height: 28px;
+width: 28px;
+/* background-color: rgb(231, 82, 8); */
+background: linear-gradient(to right, orange 50%, rgb(231, 82, 8) 50%);
+border-radius: 50%;
+background-position: 0 0;
+background-size: cover;
+cursor: pointer;
+margin-top: -8px;
+-webkit-appearance: none;
+}
