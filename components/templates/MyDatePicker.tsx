@@ -22,6 +22,8 @@ const MyDatePicker: React.FC<MyDatePickerProps> = ({ date, setDate }) => {
     </button>
   ));
 
+  ExampleCustomInput.displayName = "ExampleCustomInput";
+
   return (
     <DatePicker
       showMonthDropdown
@@ -32,5 +34,7 @@ const MyDatePicker: React.FC<MyDatePickerProps> = ({ date, setDate }) => {
     />
   );
 };
+
+MyDatePicker.displayName = "MyDatePicker";
 
 export default MyDatePicker;
